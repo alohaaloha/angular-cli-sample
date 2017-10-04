@@ -1,0 +1,43 @@
+<div class="container">
+
+    <div class="row">
+
+   <div class="col-md-12">
+       
+  
+        <h2> Data binding samples </h2>
+            <br>
+            <br> 
+           <div class="alert alert-warning" role="alert">
+           
+
+            <br> <br>
+            INPUT TEXT
+            <input [(ngModel)]="input"> 
+            <br>
+            {{input}}
+
+            <br> <br>
+            CHECKBOX
+            <input class="toggle" type="checkbox"  [(ngModel)]="check" > 
+            <br>
+            {{check}}
+
+            <br> <br>
+            RADIO BUTTON
+            <form action="">
+            <label >
+                <input type="radio"  name='a' value="one" [(ngModel)]="radio" > One
+            </label>
+            <label >
+                <input type="radio"  name='a' value="two" [(ngModel)]="radio" > Two
+            </label>
+            </form>
+            {{radio}}
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>

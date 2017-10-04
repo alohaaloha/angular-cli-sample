@@ -1,0 +1,54 @@
+<div class="container">
+
+    <div class="row">
+
+   <div class="col-md-12">
+       
+            <h2>Available cities</h2>
+
+            <br>
+            <button type="button" class="btn btn-default" aria-label="Left Align" (click)="show()">
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                Number
+            </button>
+            <br><br>
+            <b *ngIf="flag">
+                
+                 <div class="alert alert-info" role="alert">
+                      Number of cities: {{cities.length}}
+                 </div>
+            </b>
+           
+            <br> 
+             <!--TABLE-->
+                <div data-example-id="panel-without-body-with-table">
+                    <div class="panel panel-default">
+                        <!--<div class="panel-heading">Panel heading</div>-->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>See Weather</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor = "let item of cities; let i = index">        
+                                <td>{{i+1}}.</td>
+                                <td>{{item.name}}</td>
+                                <td> 
+                                    <button type="button" class="btn btn-primary" aria-label="Left Align" (click)="more(item)">
+                                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> 
+                                        See
+                                    </button>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+           
+
+        </div>
+    </div>
+</div>
